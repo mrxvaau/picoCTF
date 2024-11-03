@@ -1,0 +1,32 @@
+    Initial Step: Start by guessing 500.
+        If the hint is "Higher," the target number is between 501 and 1000.
+        If "Lower," it’s between 1 and 499.
+
+    Second Guess:
+        If the first guess was "Higher," guess 750.
+        If "Lower," guess 250.
+
+    Third Guess:
+        Based on previous feedback, continue halving the range.
+        For example, if the range is 501–750, guess 625. If it's 1–250, guess 125.
+
+    Continue Halving:
+        Repeat this process, always guessing the midpoint of the current range.
+        This binary search approach ensures you find the target number within 10 guesses.
+
+    Winning Condition:
+        Once you guess the correct number, the script will automatically connect to the CTF server to retrieve the flag.
+
+Example Sequence (if the target is 700):
+
+    Guess 500 → "Higher"
+    Guess 750 → "Lower"
+    Guess 625 → "Higher"
+    Guess 687 → "Higher"
+    Guess 719 → "Lower"
+    Guess 703 → "Lower"
+    Guess 695 → "Higher"
+    Guess 699 → "Higher"
+    Guess 700 → "Correct!"
+
+Using this strategy maximizes efficiency and ensures a quick win.
